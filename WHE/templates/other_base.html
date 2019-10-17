@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>White Heaven Entertainment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% block header %}
+        
+    {% endblock header %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top my_nav bg-dark "><button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand my_logo" href="/">WhiteHeaven Entertainment</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto my_menu">
+                <li class="nav-item active"><a class="nav-link" href="#">FeedBox</a></li>
+                <li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse"><a class="nav-link" routerlink="/streambox" href="#">StreamBox</a></li>
+                <li class="nav-item active" data-target=".navbar-collapse.show" data-toggle="collapse"><a class="nav-link" routerlink="/discover" href="#">Discover</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> Lemonade <span class="bg-warning f-12 p-1" style="font-size: 10px; color:#000;"> New</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">TalkBox</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Book Artist</a></li>
+            </ul>
+        </div>
+        <a class="icon-search search_header"></a>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
