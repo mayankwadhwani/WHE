@@ -15,9 +15,17 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://dl.dropboxusercontent.com/u/69747888/MoGo%20carousel/font-awesome.min.css'>
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
+  <link href="{% static 'css/launch.css' %}" rel="stylesheet">
+  <script src="{% static 'js/base.js' %}"></script>
   <script src="{% static 'js/launch.js' %}"></script>
 </head>
-
+<body>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
 {% block content %}
     
 {% endblock content %}
+</body>
