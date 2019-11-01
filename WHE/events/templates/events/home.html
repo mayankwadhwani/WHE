@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- for card like view -->
+{% block css_files %}
+    <link href="{% static 'css/events_base.css' %}" rel="stylesheet">
+    <!-- Material Design Lite -->
+  <!-- <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-orange.min.css"> -->
+  <!-- Material Design icon font -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+{% endblock css_files %}
+
+
+{% block content %}
+<h1>Events</h1>
+<p>Date: <input type="text" id="datepicker"></p>
+<!-- <div class="table-responsive"> -->
+<!-- {% for item in event_list %} -->
+
+  <!-- Square card -->
+  <div class="mdl-card mdl-shadow--2dp demo-card-square">
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">
+        <a href='{% url "events_home" %}'>
+            {{ item.title }}
+         </a>
+       </h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+    <span class="glyphicon glyphicon-calendar">{{ item.starts}}</span>
+    <span class="glyphicon glyphicon-map-marker"></span> {{ item.location }}
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+          Action
+        </a>
+    </div>
+  </div>
+<!-- {% endfor %} -->
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+<aside>
+  <p>Hi</p>
+</aside>
+<footer>
+  <p>Footer</p>
+</footer>
+{% endblock content %}
