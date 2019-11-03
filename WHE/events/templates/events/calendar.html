@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<table border="1" cellspacing="0" cellpadding="10" width="40%" height="80%">
+    <tr>
+        <td>Sun</td>
+        <td>Mon</td>
+        <td>Tue</td>
+        <td>Wed</td>
+        <td>Thu</td>
+        <td>Fri</td>
+        <td>Sat</td>
+    </tr>
+    {% for week in month_cal %}
+        <tr>
+        {% for day in week %}
+            <td>
+                {% if day == 0 %}
+                    -
+                    {% else %}
+                    {{ day }}
+                    {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+<a href="">previous</a>
+<a href="">next</a>
+{% endblock %}
