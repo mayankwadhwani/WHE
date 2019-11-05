@@ -1,0 +1,288 @@
+{% include "base.html" %}
+{% load static %}
+{% block css_files %}
+<!-- font awesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- owl carousel -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<!--fonts   -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/hi_IN/sdk.js#xfbml=1&version=v5.0"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link rel="stylesheet" href='{% static "css/aboutUS_style.css" %}' type="text/css">
+{% endblock css_files %}
+{% block content %}
+{% include "navbar.html" %}
+<!--carousel-->
+<div class="row" ><img src="{% static 'images/1.png' %}" class="col-md-12"></div>
+<!--our team secion-->
+<div class="main-container">
+    <div class="inside-container">
+        <div class="row">
+            <div class="col-12 our-header">
+                <h2> What we do</h2>
+                <div class="text-center">
+                    <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="row row-pad">
+            <div class=" col-sm-6 col-md-3  our-spec">
+                <div class="text-center">
+                    <i class="fas fa-music rounded-circle"></i>
+                </div>
+                <h3> ARTIST MANAGEMENT </h3>
+            </div>
+            <div class=" col-sm-6 col-md-2  our-spec">
+                <div class="text-center">
+                    <i class="fas fa-lightbulb-o rounded-circle"></i>
+                </div>
+                <h3> FESTVAL PROGRAMMING </h3>
+            </div>
+            <div class="col-sm-6 col-md-2  our-spec">
+                <div class="text-center">
+                    <i class="fas fa-globe rounded-circle"></i>
+                </div>
+                <h3> INTERNATIONAL TOURS</h3>
+            </div>
+            <div class="col-sm-6 col-md-2  our-spec">
+                <div class="text-center money-back">
+                    <i class="fa fa-film rounded-circle"></i>
+                </div>
+                <h3> PRODUCTION SERVICES</h3>
+            </div>
+            <div class="col-sm-6 col-md-3  our-spec">
+                <div class="text-center money-back">
+                    <i class="fa fa-group rounded-circle"></i>
+                </div>
+                <h3> BRANDING AND STRATEGY</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-container contact-bg" style='background-image: url({% static "images/background.jpg" %})' ;>
+    <div class="inside-container">
+        <div class="contact-con">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>White Heaven Entertainments is a talent management initiative which thrives on
+                        fulfilling the requirements regarding professional performing arts for events of
+                        all stature. <br>We at WHE have successfully conceptualised and curated more than
+                        500 concerts and comic nights across the country. We take pride in saying that we
+                        are one of the fastest growing artist management firms in the country and our
+                        professional team of experts will ensure a systematic planning and implementation of your event.</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-btn"> <a href="#" class="contact"> Check out our Facebook Feed </a> </div>
+                    <div class="fb-page" data-href="https://www.facebook.com/whiteheavenentertainments/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/whiteheavenentertainments/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/whiteheavenentertainments/">White Heaven Entertainments Pvt Ltd</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--team - item carousel-->
+<div class="main-container">
+    <div class="inside-container">
+        <div class="row">
+            <div class="col-12 our-header prom-padd">
+                <h2>our Subsidiaries</h2>
+                <div class="text-center">
+                    <hr> <i class="far fa-square rotate-45"></i> <i class="far fa-square rotate-45"></i>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xs-12 owl-seci">
+                <div class="owl-carousel owl-theme scren-owl">
+                    <div class="item item-over ">
+                        <div class="item-bg item-bg-1" style='background-image: url({% static "images/the_comic_wall.png" %});'>
+                            <div class="over-image">
+                                <span>The Comic Wall</span>
+                                <div class="social-icon">
+                                    <i ><a href="https://www.facebook.com/Comicwall19/" class="fab fa-facebook-f"></a></i>
+                                    <i ><a href="https://www.instagram.com/comicwall19/" class="fab fa-instagram "></a></i>
+                                </div>
+                                <div class="details-link"> If you have the wit to make people laugh, it's easy to conquer hearts. Comic Wall'19 is the stage where humor comes to life.
+                                    If the blend of your senses have the ability to tickle some funny bones and outsource laughter then we could be your chance to set free your spirits into creatively honest humor. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-over">
+                        <div class="item-bg item-bg-2" style='background-image: url({% static "images/the_music_box.png" %});'>
+                            <div class="over-image">
+                                <span>The Music Box</span>
+                                <div class="social-icon">
+                                    <i ><a href="https://www.facebook.com/themusicbox8/" class="fab fa-facebook-f"></a></i>
+                                    <i ><a href="https://www.instagram.com/themusicbox8/" class="fab fa-instagram "></a></i>
+                                </div>
+                                <div class="details-link"> Music box believe that young talent needs to be looked out for and fostered. Our aim is to provide independent musicians a platform, an audience that enhances their confidence and ignites the essence of performing live.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- partner carousel-->
+<div class="main-container partner-bg">
+    <h2>Our Clients</h2>
+    <div class="inside-container ">
+        <div class="row">
+            <div class="col-12 owl-seci">
+                <div class="owl-carousel owl-theme owl-partner">
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/bit_mesra.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo">
+                            <img src="{% static 'images/WHE_Clients/bits_pilani_goa.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/ict_mumbai.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iim_amritsar.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iim_calcuta.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iim_raipur.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iim_rohtak.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iim_udaipur.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iiser_kolkata.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_bhuwneswar.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_bombay.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_delhi.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_dhanbad.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_gandhinagar.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_guwahati.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_kanpur.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_kharagpur.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_mandi.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_patna.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/iit_tirupati.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/nift_ranchi.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/nit_hamirpur.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/nit_jalandar.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/nit_rourkela.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/rider_music_festival.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="item item-over ">
+                        <div class="partner-logo ">
+                            <img src="{% static 'images/WHE_Clients/tezpur_university.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src='{% static "js/script.js" %}'> </script>
+{% include "footer.html" %}
+{% endblock content %}

@@ -11,24 +11,18 @@ class Artist(models.Model):
     facebook = models.TextField('Facebook', null=True, blank=True)
     twitter = models.TextField('Twitter', null=True, blank=True)
     instagram = models.TextField('Instagram', null=True, blank=True)
-    youtube = models.TextField('Instagram', null=True, blank=True)
-    mediaKitLink = models.TextField('Instagram', null=True, blank=True)
+    youtube = models.TextField('YouTube', null=True, blank=True)
+    mediaKitLink = models.TextField('Media Kit', null=True, blank=True)
     picture = models.ImageField(upload_to='pictures/%Y/%m/%d/', null=True,
                                 blank=True)
+    short_description = models.CharField('Short Description', max_length=50)
 
     class Meta:
         verbose_name = "artist"
         verbose_name_plural = "artists"
 
     def __str__(self):
-        if self.starts.date() != self.ends.date():
-            return u"%s, %s - %s" % (self.title,
-                                     self.starts.strftime("%a %H:%M"),
-                                     self.ends.strftime("%a %H:%M"))
-        else:
-            return u"%s, %s - %s" % (self.title,
-                                     self.starts.strftime("%H:%M"),
-                                     self.ends.strftime("%H:%M"))
+        return self.name
 
     def get_absolute_url(self):
         return reverse('artists', args=[str(self.pk)])

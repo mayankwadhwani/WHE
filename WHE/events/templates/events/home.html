@@ -1,56 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
-
 <!-- for card like view -->
 {% block css_files %}
-    <link href="{% static 'events/css/events.css' %}" rel="stylesheet">
-    <link href="{% static 'events/css/card-appearance.css' %}" rel="stylesheet">
-    <script src="{% static 'events/js/events.js' %}"></script>
-    
-    <!-- Material Design Lite -->
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-orange.min.css">
-  <!-- Material Design icon font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  
+<link href="{% static 'events/css/card-appearance.css' %}" rel="stylesheet">
+<script src="{% static 'events/js/events.js' %}"></script>
 {% endblock css_files %}
-
-
 {% block content %}
-<h1>Events</h1>
+{% include "navbar.html" %}
 
-<!-- <p>Date: <input type="text" id="datepicker"></p> -->
+  <div class='header'></div>
+  <div class='showcase'></div>
+  <div class='card-container'>
 
-<div class="container">
-<section>
-<div class="row active-with-click">
   {% for item in event_list %}
-    <div class="col-md-4 col-sm-6 col-xs-12">
-    <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <h2 class="mdl-card__title-text">
-        {% if item.picture %}
-          <img src="{{ item.picture.url }}" height="180" width="280">
-        {% endif %}
-       </h2>
+<!--     <div class="col-md-3 col-sm-6 col-xs-12">
+ -->            <button class='material-card'>
+                {% if item.picture %}
+                    <img class='banner-image center-block' alt='placeholder' src='{{ item.picture.url }}'>
+                {% endif %}
+                
+                <section class='title-text'>
+                    <h3><a href='{% url "events_home" %}'>
+                            {{ item.title }}</h3>
+                    <span class="glyphicon glyphicon-map-marker">{{ item.location }}</span>
+                    <br>
+                    <span class="glyphicon glyphicon-calendar">{{ item.starts }}</span><br>
+                    <a class="description">
+                        Action
+                    </a>
+                </section>
+            </button>
+<!--         </div>
+ -->    {% endfor %}
     </div>
-    <div class="mdl-card__supporting-text">
-    <a href='{% url "events_home" %}'>
-            {{ item.title }}
-    </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <span class="glyphicon glyphicon-map-marker">{{ item.location }}</span>
-    <br>
-     <span class="glyphicon glyphicon-calendar">{{ item.starts }}</span>
-      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-          Action
-        </a>
-    </div>
-  </div>
-        </div>
-{% endfor %}
-</div>
-</section>
-</div>
+{% include "footer.html" %}
 {% endblock content %}

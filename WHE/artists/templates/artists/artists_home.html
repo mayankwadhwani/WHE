@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- for card like view -->
+{% block css_files %}
+<link href="{% static 'artists/css/artists.css' %}" rel="stylesheet">
+<script src="{% static 'artists/js/artists.js' %}"></script>
+<!-- Material Design Lite -->
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-orange.min.css">
+<!-- Material Design icon font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+{% endblock css_files %}
+{% block content %}
+{% include "navbar.html" %}
+<div class="container">
+    <!-- <div class="row active-with-click"> -->
+        {% for item in artist_list %}
+        <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top: 50px">
+            <article class="material-card Red">
+                <h2>
+                    <span>{{ item.name }}</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        <a href="{% url 'artist_details' pk=item.pk %}">
+                            Read More
+                        </a>
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        {% if item.picture %}
+                        <img class="img-responsive" src="{{ item.picture.url }}">
+                        {% endif %}
+                    </div>
+                    <div class="mc-description">
+                        {{ item.short_description }}
+                    </div>
+                </div>
+                <a class="mc-btn-action">
+                    <i class="fa fa-bars" style='margin-top:15px;'></i>
+                </a>
+                <div class="mc-footer">
+                    <h4>
+                        Social
+                    </h4>
+                    <a class="fa fa-fw fa-facebook" href="{{ item.facebook }}"></a>
+                    <a class="fa fa-fw fa-twitter" href="{{ item.twitter }}"></a>
+                    <a class="fa fa-fw fa-instagram" href="{{ item.instagram }}"></a>
+                    <a class="fa fa-fw fa-youtube-play" href="{{ item.youtube }}"></a>
+                </div>
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+<footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">White Heaven Entertainments Pvt. Ltd.</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/whiteheavenentertainments/"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href='https://www.instagram.com/whiteheavenent/'><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2">Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href='{% url "launch_home" %}'><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                            <li><a href='{% url "artists_home" %}'><span class="icon-long-arrow-right mr-2"></span>Artists</a></li>
+                            <li><a href='{% url "events_home" %}'><span class="icon-long-arrow-right mr-2"></span>Events</a></li>
+                            <li><a href='{% url "launch_contactUs" %}'><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Privacy</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Career</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About Us</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact Us</a></li>
+                            <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Buy Ticket</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">13, West Sant Nagar, Wazirabad, Delhi, India - 110084</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">090154 21658</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text"> businessdevelopment@whiteheavenentertainments.in</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="{% static 'artists/js/artists.js' %}"></script>
+
+{% endblock content %}

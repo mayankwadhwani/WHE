@@ -1,68 +1,157 @@
 {% include "base.html" %}
-  {% block content %}
-  <header class="main-header">
-    <div class="header-wrapper">
-      <div class="main-logo">WHE</div>
-      <nav>
-        <ul class="main-menu">
-          <li><a href="#section-2">Feed</a></li>
-          <li><a href="#section-5">Discover</a></li>
-          <li><a href='{% url "events_home" %}'>Events</a></li>
-          <li><a href="#main-footer">Contact</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <section id="section-1">
-    <div class="content-slider">
-      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
-      <input type="radio" id="banner2" class="sec-1-input" name="banner">
-      <input type="radio" id="banner3" class="sec-1-input" name="banner">
-      <input type="radio" id="banner4" class="sec-1-input" name="banner">
-      <div class="slider">
-        <div id="top-banner-1" class="banner">
-          <div class="banner-inner-wrapper">
-            <h2>White Heaven Entertainment</h2>
-            <!-- <h1>Welcome<br>to MoGo</h1> -->
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="#section-2">Learn More</a></div>
-          </div>
+{% load static %}
+
+{% block css_files %}
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+      <link href="{% static 'css/open-iconic-bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+   <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+   <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+   <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+   <link href="{% static 'css/aos.css' %}" rel="stylesheet">
+   <link href="{% static 'css/ionicons.min.css' %}" rel="stylesheet">
+   <link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
+   <link href="{% static 'css/icomoon.css' %}" rel="stylesheet">
+   <link href="{% static 'css/style.css' %} " rel="stylesheet">
+
+{% endblock css_files %}
+
+{% block content %}
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    {% include "navbar.html" %}
+    <section id="home-section" class="hero js-fullheight">
+
+        <div class="home-slider owl-carousel js-fullheight">
+
+            <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/1.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/2.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/3.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/4.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/5.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/6.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/7.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/8.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid px-0">
+                    <div class="row d-flex no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third order-md-last js-fullheight img" style="background-image:url(media/images/carousel/9.jpg);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth js-fullheight d-flex align-items-start align-items-md-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div id="top-banner-2" class="banner">
-          <div class="banner-inner-wrapper">
-            <h2>What We Do</h2>
-            <h1>Great<br>MoGo</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="#section-4">Learn More</a></div>
-          </div>
-        </div>
-        <div id="top-banner-3" class="banner">
-          <div class="banner-inner-wrapper">
-            <h2>Here We Are</h2>
-            <h1>We Are<br>MoGo</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="#section-6">Learn More</a></div>
-          </div>
-        </div>
-        <div id="top-banner-4" class="banner">
-          <div class="banner-inner-wrapper">
-            <h2>Our Contacts</h2>
-            <h1>Welcome<br>to MoGo</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
-          </div>
-        </div>
-      </div>
-      <nav>
-        <div class="controls">
-          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span>01</span> Intro</label>
-          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span>02</span> Work</label>
-          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span>03</span> About</label>
-          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span>04</span> Contacts</label>
-        </div>
-      </nav>
-    </div>
-  </section>
-<!-- partial -->
+    </section>
+    
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+</svg>
+</div>
+{% include "footer.html" %}
 {% endblock content %}

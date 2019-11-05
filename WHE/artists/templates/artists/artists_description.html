@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- for card like view -->
+{% block css_files %}
+<link rel="stylesheet" href='{%static "artists/css/artists_description.css" %}'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock css_files %}
+
+
+{% block content %}
+
+  <nav class="navbar navbar-expand-lg" id="ftco-navbar">
+        <div class="container">
+            <p><a class="navbar-brand" href="index.html";><h1>WHE</h1><img src='{% static "images/WHE.png" %}' class="img-fluid logo-image"></a></p>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href='{% url "launch_home" %}' class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About Us</span></a></li>
+                    <li class="nav-item"><a href='{% url "artists_home" %}' class="nav-link"><span>Artists</span></a></li>
+                    <li class="nav-item"><a href='{% url "events_home" %}' class="nav-link"><span>Events</span></a></li>
+                    <!--            <li class="nav-item"><a href="#pricing-section" class="nav-link"><span>Pricing</span></a></li>
+ -->
+                    <li class="nav-item"><a href='{% url "launch_contactUs" %}' class="nav-link"><span>Contact</span></a></li>
+                    <!-- <li class="nav-item cta"><a href="#" class="nav-link">Buy Ticket</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:50%" id="artist_about">
+    <div class="bgimg " style='background-image: url({{ artist.picture.url }});'></div>
+</nav>
+
+  <nav class="socialMediaNav">
+    <input type="checkbox" class="side-toggle" name="side-toggle" id="side-toggle"/>
+
+    <label class="side-toggle-button" for="side-toggle">
+        <span class="hamburger hb1"></span>
+        <span class="hamburger hb2"></span>
+        <span class="hamburger hb3"></span>
+
+      </label>
+
+    <a href="{{ artist.facebook }}" class="side-item" target="_Blank">
+      <span class="side-icon fa fa-facebook"></span>
+    </a>
+
+    <a href="{{ artist.twitter }}" class="side-item" target="_Blank">
+      <span class="side-icon fa fa-twitter"></span>
+    </a>
+
+    <a href="{{ artist.instagram }}" class="side-item" target="_Blank">
+      <span class="side-icon fa fa-instagram"></span>
+    </a>
+
+    <a href="{{ artist.youtube }}" class="side-item" target="_Blank">
+      <span class="side-icon fa fa-youtube"></span>
+    </a>
+
+  </nav>  
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:50%">
+
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding::5px 10px" id="home">
+    <br><br><br><br>
+    <h1 class="w3-jumbo"><b>{{ artist.name }}</b></h1>
+        <h2>About</h2>
+  </header>
+
+
+  <!-- About Section -->
+  <div class="w3-content w3-center w3-text-black w3-padding" id="about">
+    <hr class="w3-opacity">
+    <p>{{ artist.about }}
+    </p>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i><a href="{{artist.mediaKitLink }}" target="_Blank"> Mediakit</a>
+    </button>
+
+  <!-- End About Section -->
+  </div>
+  
+</div>
+{% endblock content %}
