@@ -1,0 +1,33 @@
+body {
+  background-color: #e7e7e7;
+  padding: 0 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.carousel {
+  .carousel-inner {
+    .carousel-item {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.carousel {
+  .carousel-inner {
+    .carousel-item {
+      .carousel-img {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: contain;
+        background-color: red;
+      }
+      }
+    }
+  }
+}
